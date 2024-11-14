@@ -1,0 +1,12 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blur-effect {
+    transition: filter 0.3s ease;
+  }
+  
+  .blur-effect.blur {
+    filter: blur(4px);
+  }
