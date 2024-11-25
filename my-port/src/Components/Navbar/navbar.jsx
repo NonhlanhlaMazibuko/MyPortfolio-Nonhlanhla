@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ isPopupOpen }) => {
   const [shadow, setShadow] = useState(false);
 
   useEffect(() => {
@@ -8,6 +8,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleShadow);
     return () => window.removeEventListener("scroll", handleShadow);
   }, []);
+
+  if (isPopupOpen) {
+    return null;
+  }
 
   return (
     <div

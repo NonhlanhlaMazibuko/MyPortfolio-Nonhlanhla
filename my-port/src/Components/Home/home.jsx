@@ -5,12 +5,14 @@ const Home = () => {
   return (
     <div id="home"
     style={{
-      backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/skills/skills.jpg)`,
+      backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/home_bg/images.jpg)`,
+      backgroundColor: '#d1c5d2',
       backgroundSize: "cover",
-      backgroundPosition: "center",
+      backgroundPosition: "fullscreen",
       backgroundRepeat: "no-repeat",
       width: "100%",
       height: "100vh",
+      
       }}
      className="relative w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-1 pt-14 flex justify-center items-center">

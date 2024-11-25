@@ -33,14 +33,15 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section 
+    <section id='skills'
       className="languageMainContainer grid grid-cols-4 gap-8 p-8 bg-cover bg-center"
       style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Assets/home_bg/home.jpg)` }}
     >
       {skillsData.map((category, index) => (
         <div
           key={index}
-          className="languageSubContainer flex flex-col items-center p-4 border rounded-lg shadow-md bg-purple-100"
+          className="languageSubContainer flex flex-col items-center p-4 border rounded-lg shadow-md"
+          style={{ backgroundColor: '#c6b7c8' }}
         >
           <div className="ellipse mb-4">
             <img src={category.image} alt="Ellipse Icon" className="w-20 h-20 object-contain"/>
