@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Card = ({
   title,
@@ -8,9 +8,16 @@ const Card = ({
   tech,
   description,
   styles,
-  isPopupOpen,
-  onPopupToggle,
+  setIsPopupOpen
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handlePopupToggle = () => {
+    setIsOpen(!isOpen);
+    setIsPopupOpen(!isOpen);
+    document.body.style.overflow = isOpen ? "auto" : "hidden";
+  };
+
   return (
     <div className="w-full">
       <div className="relative flex items-center justify-center h-[300px] w-full shadow-xl border-2 border-gray-500 rounded-xl p-4 group hover:bg-gradient-to-r from-stone-400 to-zinc-900">
@@ -26,18 +33,20 @@ const Card = ({
 
           <button
             className="p-2 text-center text-red-400 rounded-lg bg-white font-bold text-lg cursor-pointer mt-4"
+            onClick={handlePopupToggle}
           >
             See Details
           </button>
         </div>
       </div>
 
-      {isPopupOpen && (
+      {isOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-lg w-[90%] md:w-[70%] p-6 relative overflow-y-auto max-h-[90vh]">
             <button
-              onClick={onPopupToggle}
+              onClick={handlePopupToggle}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+              aria-label="Close popup"
             >
               &times;
             </button>
