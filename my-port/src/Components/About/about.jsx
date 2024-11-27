@@ -29,7 +29,7 @@ const About = () => {
           build my skills, and create solutions that bring value to users and organizations alike.
           </p>
           <a
-            href="https://www.canva.com/design/DAFSRmWYo_k/B69moS0ux5KGgfvRBzZvhA/view?utm_content=DAFSRmWYo_k&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+            href="/pdfs/NonhlanhlaMazibukoResume-preferred.pdf"
             target="_blank"
             rel="noreferrer"
             className="inline-block py-2 text-blue-600 underline font-semibold mt-4"

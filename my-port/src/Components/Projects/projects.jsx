@@ -1,13 +1,12 @@
 import React from "react";
 import Card from "./projectCard";
-//import Navbar from "../Navbar/navbar";
 
-const Projects = ({ setIsPopupOpen}) => {
+const Projects = ({ setIsPopupOpen }) => {
   return (
     <div id="projects" className="w-full" style={{ backgroundColor: '#f3e9f3' }}>
       <div className="max-w-[1240px] mx-auto px-2 py-16">
         <h2 className="tracking-widest uppercase py-4 font-semibold py-4 text-gray-800">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
           <Card
             title="MovieReel Project"
             backgroundImage={"/Assets/projects/MovieReel.png"}
@@ -22,7 +21,7 @@ const Projects = ({ setIsPopupOpen}) => {
             title="Taskly Task Manager"
             backgroundImage={"Assets/projects/taskly.png"}
             projectCode="https://github.com/mpho-oganne/taskly-fullstack-project"
-            projectDemo="#"
+            projectDemo="#projects"
             tech="NodeJS | React"
             description="The Taskly Task Manager is a web application designed to streamline task organization and productivity. Built using the MERN stack, the application allows users to create, update, filter, and delete tasks. Features include an intuitive dashboard, calendar integration, and weekly AI-generated reports. The project showcases expertise in CRUD operations, user authentication (session-based), and front-end development with React. Taskly demonstrates the integration of APIs to enhance functionality and interactivity."
             styles="TailwindCSS"
@@ -38,12 +37,11 @@ const Projects = ({ setIsPopupOpen}) => {
             styles="SK-Learn | Pandas"
             setIsPopupOpen={setIsPopupOpen}
           />
-
           <Card
             title="Random Forest Model"
             backgroundImage={"Assets/projects/random.png"}
             projectCode="https://github.com/NonhlanhlaMazibuko/Data_science_projects/blob/main/RDKit_machine_learning/solubility_assignment(1).ipynb?short_path=39718c9"
-            projectDemo="/#project"
+            projectDemo="/#projects"
             tech="Jupyter Notebook"
             description="This project applied Random Forest algorithms to a chemistry dataset to predict chemical properties and behaviors. Using RDKit, molecular descriptors were generated to represent the chemical structures numerically. The workflow included data preprocessing, feature selection, and model training to evaluate the predictive accuracy of the random forest model. Key metrics such as accuracy, precision, and feature importance were analyzed to interpret the results. The project highlighted the effective use of machine learning in chemistry, demonstrating skills in feature engineering, model evaluation, and leveraging domain-specific libraries like RDKit."
             styles="SK-Learn | Pandas"
